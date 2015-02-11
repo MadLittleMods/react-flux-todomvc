@@ -19,7 +19,7 @@ To build:
  - `npm install`
  - `npm install webpack -g`
  - `webpack`
- - Set up your server to serve the app for all the sub-urls. [Instructions for Apache below](#apache-conf).
+ - Set up your server to serve the app for all the sub-urls. [Instructions for Apache below](#apache-configurationsetup).
  - Serve up the files
 
 
