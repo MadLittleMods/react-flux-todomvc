@@ -17,8 +17,14 @@ function makeTodoAppWithFilter(filter) {
 	});
 }
 
+// Some auto detection when in dev and on Github pages
+var parentPath = '/random/react-flux-todo-list-demo-project/';
+if(window.location.host === 'madlittlemods.github.io') {
+	parentPath = '/react-flux-todomvc/';
+}
+
 var routes = (
-	<Route handler={RouteHandler} path="/random/react-flux-todo-list-demo-project/" ignoreScrollBehavior>
+	<Route handler={RouteHandler} path={parentPath} ignoreScrollBehavior>
 		<DefaultRoute handler={TodoApp} />
 		<NotFoundRoute handler={TodoApp} />
 		

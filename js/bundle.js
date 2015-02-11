@@ -63,8 +63,14 @@
 		});
 	}
 
+	// Some auto detection when in dev and on Github pages
+	var parentPath = '/random/react-flux-todo-list-demo-project/';
+	if(window.location.host === 'madlittlemods.github.io') {
+		parentPath = '/react-flux-todomvc/';
+	}
+
 	var routes = (
-		React.createElement(Route, {handler: RouteHandler, path: "/random/react-flux-todo-list-demo-project/", ignoreScrollBehavior: true}, 
+		React.createElement(Route, {handler: RouteHandler, path: parentPath, ignoreScrollBehavior: true}, 
 			React.createElement(DefaultRoute, {handler: TodoApp}), 
 			React.createElement(NotFoundRoute, {handler: TodoApp}), 
 			

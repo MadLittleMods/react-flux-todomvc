@@ -11,6 +11,8 @@ This project was started by following the [Flux TodoMVC tutorial](http://faceboo
  - Using [Immutable.js](http://facebook.github.io/immutable-js/) for data structures
  - Debounced persistant saving to [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API)
 
+# [Live Demo](http://madlittlemods.github.io/react-flux-todomvc/)
+
 # Run/Build
 
 To build:
