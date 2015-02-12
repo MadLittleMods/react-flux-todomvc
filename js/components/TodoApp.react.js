@@ -15,6 +15,7 @@ function getTodoState() {
 		allTodos: TodoStore.getAll(),
 		activeTodos: TodoStore.getAllActive(),
 		completedTodos: TodoStore.getAllCompleted(),
+		filter: TodoStore.getFilter(),
 		areAllComplete: TodoStore.areAllComplete()
 	}
 }
@@ -47,7 +48,7 @@ var TodoApp = React.createClass({
 
 	render: function() {
 
-		var filter = this.props.filter || TodoConstants.TODO_FILTER_ALL;
+		var filter = this.state.filter;
 
 		return (
 			<div>

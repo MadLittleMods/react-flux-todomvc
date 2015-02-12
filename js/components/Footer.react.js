@@ -51,6 +51,7 @@ var Footer = React.createClass({
 							className={cx({
 								'selected': filter === TodoConstants.TODO_FILTER_ALL
 							})}
+							onClick={this._onFilterItemClick.bind(null, TodoConstants.TODO_FILTER_ALL)}
 						>
 							
 							All ({total})
@@ -62,6 +63,7 @@ var Footer = React.createClass({
 							className={cx({
 								'selected': filter === TodoConstants.TODO_FILTER_ACTIVE
 							})}
+							onClick={this._onFilterItemClick.bind(null, TodoConstants.TODO_FILTER_ACTIVE)}
 						>
 							
 							Active ({activeTotal})
@@ -73,6 +75,7 @@ var Footer = React.createClass({
 							className={cx({
 								'selected': filter === TodoConstants.TODO_FILTER_COMPLETED
 							})}
+							onClick={this._onFilterItemClick.bind(null, TodoConstants.TODO_FILTER_COMPLETED)}
 						>
 							
 							Completed ({completedTotal})
@@ -82,6 +85,10 @@ var Footer = React.createClass({
 				{clearCompletedButton}
 			</footer>
 		);
+	},
+
+	_onFilterItemClick: function(filter, e) {
+		TodoActions.filter(filter);
 	},
 
 	_onClearCompletedClick: function() {

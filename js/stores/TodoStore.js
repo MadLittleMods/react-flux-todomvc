@@ -74,6 +74,10 @@ var TodoStore = assign({}, EventEmitter.prototype, {
 		return completedTodos;
 	},
 
+	getFilter: function() {
+		return _filter;
+	},
+
 	getSaveState: function() {
 		return _saveState;
 	},
