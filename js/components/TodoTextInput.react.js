@@ -28,6 +28,7 @@ var TodoTextInput = React.createClass({
 				onKeyDown={this._onKeyDown}
 				value={this.state.value}
 				autoFocus={true}
+				onFocus={this._onFocus}
 			/>
 		);
 	},
@@ -39,6 +40,12 @@ var TodoTextInput = React.createClass({
 		this.setState({
 			value: ''
 		});
+	},
+
+	// This is to make sure the cursor position is at the end of text (not the start)
+	_onFocus: function(event) {
+		var inputVal = this.getDOMNode().value;
+		this.getDOMNode().setSelectionRange(inputVal.length, inputVal.length);
 	},
 
 	_onChange: function(event) {
